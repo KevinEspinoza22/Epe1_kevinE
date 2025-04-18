@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+    <form id="contactoForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br><br>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" required><br><br>
+        
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" required><br><br>
+        
+        <label for="comuna">Comuna:</label>
+        <select id="comuna" required>
+            <option value="">Seleccione una comuna</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Providencia">Providencia</option>
+            <option value="Las Condes">Las Condes</option>
+            <option value="La Florida">La Florida</option>
+            <option value="Maipú">Maipú</option>
+            <option value="Ñuñoa">Ñuñoa</option>
+            <option value="Puente Alto">Puente Alto</option>
+            <option value="Recoleta">Recoleta</option>
+            <option value="Vitacura">Vitacura</option>
+            <option value="Quilicura">Quilicura</option>
+        </select><br><br>
+        
+        <button type="button" onclick="enviarFormulario()">Enviar</button>
+    </form>
+
+    <script>
+        function enviarFormulario() {
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const direccion = document.getElementById('direccion').value;
+            const comuna = document.getElementById('comuna').value;
+
+            alert(`Nombre: ${nombre}\nCorreo: ${email}\nDirección: ${direccion}\nComuna: ${comuna}`);
+        }
+    </script>
+</body>
+</html>
